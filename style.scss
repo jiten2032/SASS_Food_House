@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+ font-family: 'Poppins',sans-serif; 
+
+}
+
+
+$primary_color:white;
+$black_color:black;
+
+
+.food_header{
+
+ height: 600px;
+ width: 100%;
+ background-image: url("./img/header.png");
+ clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+ .food_overlay{
+      height: 100%;
+      width: 100%;
+    background-color: rgba($color:#000, $alpha: 0.3);
+
+      .navbar{
+            background-color:  rgba($color: $primary_color, $alpha: 0.6);
+            width: 100%;
+        display: flex;
+        justify-content: center;
+          
+            ul{ 
+                display: flex;
+                 li{
+                    list-style-type: none;
+                  
+                      a{
+                          text-decoration: none;
+                           color: $black_color;
+                           padding: 20px;
+                           font-weight: 300px;
+
+                        &.active{
+                         color: seagreen;
+                        }                    
+                        }
+                 }
+           }
+       }
+       .content{
+        text-align: center;
+ margin-top: 150px;
+       
+        h1{
+        font-family: 'Merienda';
+        font-weight: bold;
+        color: $primary_color;
+        font-size: 100px;
+       }
+        p{
+        color: $primary_color;  
+        font-size: 20px;
+        letter-spacing: 6px;
+         }
+      }
+
+   }
+  
+     
+}
+
+

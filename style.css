@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.food_header {
+  height: 600px;
+  width: 100%;
+  background-image: url("./img/header.png");
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+.food_header .food_overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.food_header .food_overlay .navbar {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.food_header .food_overlay .navbar ul {
+  display: flex;
+}
+.food_header .food_overlay .navbar ul li {
+  list-style-type: none;
+}
+.food_header .food_overlay .navbar ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  font-weight: 300px;
+}
+.food_header .food_overlay .navbar ul li a.active {
+  color: seagreen;
+}
+.food_header .food_overlay .content {
+  text-align: center;
+  margin-top: 150px;
+}
+.food_header .food_overlay .content h1 {
+  font-family: "Merienda";
+  font-weight: bold;
+  color: white;
+  font-size: 100px;
+}
+.food_header .food_overlay .content p {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 6px;
+}/*# sourceMappingURL=style.css.map */
