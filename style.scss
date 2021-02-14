@@ -1,3 +1,19 @@
+@mixin coloricon {
+    background-color: rgb(104,159,56);
+    padding: 30px 30px;
+    border-radius: 55px;
+    color: white;
+    font-size: 30px;
+    margin:20px 17px; 
+
+}
+@mixin overlay {
+    height: 100%;
+    width: 100%;
+  background-color: rgba($color:#000, $alpha: 0.3);
+}
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -8,9 +24,11 @@ body{
 
 }
 
-
+$text_color:rgb(104,159,56);
 $primary_color:white;
 $black_color:black;
+$align_text:center ;
+
 
 
 .food_header{
@@ -21,9 +39,7 @@ $black_color:black;
  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 
  .food_overlay{
-      height: 100%;
-      width: 100%;
-    background-color: rgba($color:#000, $alpha: 0.3);
+    @include overlay();
 
       .navbar{
             background-color:  rgba($color: $primary_color, $alpha: 0.6);
@@ -51,7 +67,7 @@ $black_color:black;
        }
        .content{
         text-align: center;
- margin-top: 150px;
+        margin-top: 150px;
        
         h1{
         font-family: 'Merienda';
@@ -71,4 +87,112 @@ $black_color:black;
      
 }
 
+// food header
 
+.food_about{
+    width: 100%;
+    margin: 40px auto;
+    h2{
+        font-weight: bolder;
+        text-align: center;
+    }
+ &_contents{
+    display: flex;  
+    justify-content: space-evenly;
+    margin: 80px auto;
+    flex-wrap: wrap;
+
+    .food_about_content1{
+        h4{
+            font-weight: bold;
+            
+        }
+        .text_color{
+            color:$text_color;
+        }
+        p{
+            max-width: 500px;
+            line-height: 40px;
+        }
+        .food_about_icons{
+            display: flex;
+        max-width: 90px;
+       
+        
+         
+         
+          .icon1{
+              @include coloricon()
+          }
+          .icon2{
+            @include coloricon()
+        }
+        .icon3{
+            @include coloricon()
+        }
+        .icon4{
+            @include coloricon()
+        }
+        
+        }
+        
+    }
+    .food_about_content2{
+        position: relative;
+      .food_about_img_backgroundcolor{
+          background-color:$text_color;
+          height: 300px;
+          width: 300px;
+          margin: 50px auto;
+
+      }
+      .food_about_img{
+          position: absolute;
+     left: 35px;
+    top: 0px;
+      }
+    }
+
+
+ }
+
+
+
+}
+// Food About
+.food_offer{
+    background-image: url("./img/offer.png");
+    width: 100%;
+    height: 500px;
+    background-image: url("../../img/offer.png");
+    color: #fff;
+
+    .food_offer_overlay{
+        @include overlay();
+   
+        .food_ofer_content{
+        text-align: center;
+         padding-top: 180px;
+
+         h1{
+          font-weight: bolder;
+          font-size: 50px;
+         letter-spacing: 5px;
+          }
+       p{
+          letter-spacing: 5px;
+       }
+       button{
+          background-color:$primary_color;
+          padding: 10px 30px;
+          border-radius: 20px;
+          color:$text_color ;
+          transition: 0.5s all;
+          &:hover{
+              color: $primary_color;
+              background-color: $text_color;
+          }
+       }
+          }
+    }
+}
